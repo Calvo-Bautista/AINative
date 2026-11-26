@@ -2778,9 +2778,9 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
   gap: 16px;
 }
 #slide-3 .s3-stat {
-  flex: 1.08 1 0;
+  flex: 0.72 1 0;
   min-height: 0;
-  padding: 25px 31px;
+  padding: 20px 28px;
   background: radial-gradient(ellipse at 96% 0%, #bf2458 0%, transparent 60%),
               linear-gradient(148deg, #8a0024, #530119);
 }
@@ -2789,8 +2789,8 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
   position: absolute;
   top: 15px;
   right: 18px;
-  height: 109px;
-  width: 142px;
+  height: 84px;
+  width: 110px;
   background: var(--s3-visual) center / contain no-repeat;
   pointer-events: none;
 }
@@ -2799,21 +2799,24 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
 #slide-3 [data-finding="3"] { --s3-visual: var(--s3-checklist); }
 #slide-3 [data-finding="4"] { --s3-visual: var(--s3-person); }
 #slide-3 .s3-stat-eyebrow { color: #c3e6ff; opacity: 1; }
-#slide-3 .s3-stat-num { font-size: 94px; color: #fff; }
+#slide-3 .s3-stat-num { margin-top: 6px; font-size: 70px; color: #fff; }
 #slide-3 .s3-stat-num small { color: #bde4ff; }
-#slide-3 .s3-stat-lbl { font-size: 23px; color: #fff; }
+#slide-3 .s3-stat-lbl { margin-top: 10px; font-size: 19px; color: #fff; }
 #slide-3 .s3-chip { font-size: 15px; background: #ffffff1a; border-color: #ffffff52; }
 #slide-3 .s3-hyp {
-  flex: 0.8 1 0;
+  flex: 1.28 1 0;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-color: #b4d9f1;
   background: linear-gradient(145deg, #c8eaff, #edf8ff);
-  padding: 18px 23px 20px;
+  padding: 26px 32px 28px;
   box-shadow: none;
 }
-#slide-3 .s3-hyp-lbl { padding: 0; background: transparent; }
+#slide-3 .s3-hyp-lbl { align-self: flex-start; padding: 0; background: transparent; font-size: 17px; }
 #slide-3 .s3-hyp-lbl::before { display: none; }
-#slide-3 .s3-hyp-txt { margin-top: 9px; font-size: 24px; }
+#slide-3 .s3-hyp-txt { margin-top: 14px; font-size: 34px; line-height: 1.25; }
 
 #slide-3 .s3-seg.s1,
 #slide-3 .h-block.bad { background: linear-gradient(160deg, #a20739, #76001f); }
@@ -2932,8 +2935,9 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
   #slide-3 .s3-stat, #slide-3 .s3-hyp { padding: 11px; border-radius: 11px; }
   #slide-3 .s3-stat::after { top: 5px; right: 8px; width: 62px; height: 49px; }
   #slide-3 .s3-stat-eyebrow, #slide-3 .s3-hyp-lbl { font-size: 9px; }
-  #slide-3 .s3-stat-num { font-size: 35px; margin-top: 4px; }
-  #slide-3 .s3-stat-lbl, #slide-3 .s3-hyp-txt { font-size: 13px; margin-top: 4px; }
+  #slide-3 .s3-stat-num { font-size: 28px; margin-top: 3px; }
+  #slide-3 .s3-stat-lbl { font-size: 11px; margin-top: 3px; }
+  #slide-3 .s3-hyp-txt { font-size: 17px; margin-top: 5px; }
   #slide-3 .s3-chip { font-size: 9px; margin-top: 7px; padding: 3px 6px; }
   #slide-3 .s3-chip svg { width: 11px; height: 11px; }
   #slide-3 .s3-foot { font-size: 9px; }
@@ -3687,7 +3691,6 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
                   <div class="s3-stat-eyebrow">Dato clave</div>
                   <div class="s3-stat-num">49,2<small>%</small></div>
                   <div class="s3-stat-lbl">de las licencias registró de 0 a 5 días de actividad. <strong>964 licencias, con un costo anual asociado de USD 96.400.</strong></div>
-                  <span class="s3-chip warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Inversión con margen de mejora</span>
                 </div>
                 <div class="s3-hyp">
                   <div class="s3-hyp-lbl">Hipótesis</div>
@@ -3724,7 +3727,6 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
                   <div class="s3-stat-eyebrow">Diferencia</div>
                   <div class="s3-stat-num">−17,9<small>p.p.</small></div>
                   <div class="s3-stat-lbl">de licencias con uso nulo o bajo <strong>en equipos cuyos líderes registraron más de 5 días de actividad.</strong></div>
-                  <span class="s3-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Menor proporción de uso nulo o bajo</span>
                 </div>
                 <div class="s3-hyp">
                   <div class="s3-hyp-lbl">Hipótesis</div>
@@ -3794,7 +3796,6 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
                   <div class="s3-stat-eyebrow">Diferencia</div>
                   <div class="s3-stat-num">−49,6<small>p.p.</small></div>
                   <div class="s3-stat-lbl">de licencias con uso nulo o bajo <strong>entre quienes usan agentes</strong> frente a quienes no los usan.</div>
-                  <span class="s3-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Menor proporción de uso nulo o bajo</span>
                 </div>
                 <div class="s3-hyp">
                   <div class="s3-hyp-lbl">Hipótesis</div>
