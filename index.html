@@ -3864,33 +3864,38 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
 #slide-10 .ov-kicker{font:700 11px 'JetBrains Mono',monospace;letter-spacing:.16em;color:var(--celeste);text-transform:uppercase}
 #slide-10 .ov-action{font:700 12px 'Plus Jakarta Sans',sans-serif;border:1px solid #ffffff38;color:white;background:#ffffff12;border-radius:999px;padding:10px 16px;cursor:pointer}
 #slide-10 .ov-action:hover{background:#8a0024;border-color:#ff94bb}
-#slide-10 .ov-intro{position:absolute;inset:0 10% 55px;display:grid;place-content:center;text-align:center;z-index:2;transition:opacity .65s,transform .8s;pointer-events:none}
-#slide-10 .ov-intro h2{font-size:clamp(30px,5vw,78px);line-height:1.08;letter-spacing:-.05em;max-width:1000px}
-#slide-10 .ov-intro p{font-size:clamp(14px,1.6vw,21px);color:var(--celeste);margin-bottom:22px}
-#slide-10.ov-running .ov-intro,#slide-10.ov-focus .ov-intro{opacity:0;transform:scale(.88)}
-#slide-10 .ov-field{position:absolute;inset:85px 3.5% 115px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:clamp(3px, .6vw, 10px);align-items:stretch;transition:opacity .8s,filter .8s,transform 1s;pointer-events:none}
-#slide-10 .ov-card{position:relative;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:clamp(6px,1vw,16px);border:1px solid #ffffff30;border-radius:12px;background:linear-gradient(140deg,#222430,#181922);box-shadow:0 10px 35px #0006;opacity:0;transform:translateY(24px) scale(.82) rotate(var(--angle));transition:opacity .38s,transform .52s cubic-bezier(.16,1,.3,1);overflow:hidden}
-#slide-10 .ov-card.in{opacity:1;transform:translate(var(--dx),var(--dy)) rotate(var(--angle)) scale(1.02)}
+#slide-10 .ov-field{position:absolute;inset:66px 3.5% 115px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:clamp(3px, .6vw, 10px);align-items:stretch}
+#slide-10 .ov-card{position:relative;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:clamp(2px,.55vh,5px);padding:clamp(5px,1.15vh,11px) clamp(5px,1vw,16px);border:1px solid #ffffff30;border-radius:12px;background:linear-gradient(140deg,#222430,#181922);box-shadow:0 10px 35px #0006;transform:translate(var(--dx),var(--dy)) rotate(var(--angle)) scale(1.02);overflow:hidden}
+#slide-10.active .ov-card{animation:ov-card-enter .52s var(--ov-delay) cubic-bezier(.16,1,.3,1) both}
+@keyframes ov-card-enter {
+  from { opacity: 0; transform: translateY(24px) scale(.82) rotate(var(--angle)); }
+}
 #slide-10 .ov-card:nth-child(4n+1){background:linear-gradient(140deg,#3d1425,#26121e);border-color:#ff94bb55}
 #slide-10 .ov-card:nth-child(4n+3){background:linear-gradient(140deg,#142b41,#172332);border-color:#9ad5ff55}
 #slide-10 .ov-kind{font:600 clamp(7px,.68vw,11px) 'JetBrains Mono',monospace;letter-spacing:.09em;color:var(--celeste);text-transform:uppercase;line-height:1.2}
-#slide-10 .ov-value{font-weight:800;font-size:clamp(12px,1.5vw,25px);line-height:1.12;letter-spacing:-.035em;overflow-wrap:break-word}
+#slide-10 .ov-value{font-weight:800;font-size:clamp(12px,min(1.5vw,2.45vh),25px);line-height:1.12;letter-spacing:-.035em;overflow-wrap:break-word}
 #slide-10 .ov-number .ov-value{font:800 clamp(20px,2.65vw,42px)/1 'JetBrains Mono',monospace;color:white}
 #slide-10 .ov-sub{font-size:clamp(8px,.85vw,13px);line-height:1.25;color:#fffB}
-#slide-10.ov-focus .ov-field{opacity:.12;filter:blur(5px);transform:scale(.94)}
-#slide-10 .ov-focus-content{position:absolute;inset:90px 8% 120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(18px) scale(.95);transition:opacity .75s .15s,transform .75s .15s;pointer-events:none;z-index:5}
-#slide-10.ov-focus .ov-focus-content{opacity:1;transform:none}
-#slide-10 .ov-focus-content small{font:700 12px 'JetBrains Mono',monospace;letter-spacing:.18em;color:var(--celeste);margin-bottom:20px}
-#slide-10 .ov-focus-content h2{font-size:clamp(30px,4.8vw,72px);line-height:1.08;letter-spacing:-.05em;max-width:1000px}
-#slide-10 .ov-focus-content p{margin-top:22px;font-size:clamp(16px,2vw,28px);font-weight:600;color:var(--rosa-logo)}
-#slide-10 .ov-footer{position:absolute;bottom:65px;left:3.5%;right:3.5%;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:10}
-#slide-10 .ov-status{font:600 10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#9ad5ff;text-transform:uppercase}
-#slide-10 .ov-actions{display:flex;gap:8px}
+#slide-10 .ov-footer{position:absolute;bottom:65px;left:3.5%;right:3.5%;display:flex;justify-content:flex-end;z-index:10}
 #slide-10 .ov-action{background:#8a0024;border-color:#ff94bb66;font-size:13px}
 #slide-10 .ov-action:focus-visible{outline:2px solid #9ad5ff;outline-offset:4px}
-#slide-10 .ov-action[hidden]{display:none}
 @media(max-width:850px){#slide-10 .ov-field{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));inset:70px 3% 110px}#slide-10 .ov-card{padding:6px;gap:2px}#slide-10 .ov-value{font-size:clamp(10px,2vw,18px)}#slide-10 .ov-sub{font-size:9px}#slide-10 .ov-number .ov-value{font-size:clamp(17px,3vw,30px)}#slide-10 .ov-header{top:15px;left:15px;right:15px}}
 @media(max-height:580px){#slide-10 .ov-field{inset:50px 3% 108px}#slide-10 .ov-header{top:8px}#slide-10 .ov-card{padding:5px;gap:2px}#slide-10 .ov-kind,#slide-10 .ov-sub{font-size:8px}#slide-10 .ov-value{font-size:clamp(10px,1.2vw,18px)}#slide-10 .ov-number .ov-value{font-size:clamp(16px,2vw,26px)}}
+@media (max-width: 420px) {
+  #slide-10 .ov-field { inset: 46px 3% 108px; }
+  #slide-10 .ov-card { padding: 4px; }
+  #slide-10 .ov-kind { letter-spacing: .03em; font-size: 7px; }
+  #slide-10 .ov-sub { font-size: 8px; }
+}
+@media (max-width: 350px) {
+  #slide-10 .ov-field {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: minmax(76px, auto);
+    overflow-y: auto;
+    padding: 6px;
+  }
+}
 @media(prefers-reduced-motion:reduce){#slide-10 *,#slide-10{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -4015,13 +4020,36 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
          DIAPOSITIVA 3: DESCUBRIR · HALLAZGOS E HIPÓTESIS
     ========================================================= -->
     
-<section id="slide-10" class="slide" aria-label="Del ruido al foco">
- <div class="ov-grid-bg" aria-hidden="true"></div>
- <header class="ov-header"><span class="ov-kicker">IA NATIVE / El punto de partida</span></header>
- <div class="ov-intro"><p>Una consigna. Muchas incógnitas.</p><h2>¿Cómo arrancamos?</h2></div>
- <div class="ov-field"><article class="ov-card" data-wave="0" style="--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">AGENTES</span><strong class="ov-value">Facilitar la creación de agentes</strong><span class="ov-sub">Que cualquiera pueda armar el suyo</span></article><article class="ov-card" data-wave="0" style="--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">EXPERIENCIA</span><strong class="ov-value">Una UI con identidad Supervielle</strong></article><article class="ov-card" data-wave="0" style="--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">MARCA</span><strong class="ov-value">Crear una mascota de IA del banco</strong><span class="ov-sub">La cara de la IA en Supervielle</span></article><article class="ov-card" data-wave="0" style="--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">AGENTES</span><strong class="ov-value">Mejores agentes para cada área</strong></article><article class="ov-card" data-wave="0" style="--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">INTEGRACIÓN</span><strong class="ov-value">MCPs más completos</strong></article><article class="ov-card" data-wave="0" style="--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">INTEGRACIÓN</span><strong class="ov-value">Más conectores</strong><span class="ov-sub">Con los sistemas del banco</span></article><article class="ov-card" data-wave="1" style="--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">ADOPCIÓN</span><strong class="ov-value">Aumentar el uso de la IA en el banco</strong></article><article class="ov-card" data-wave="1" style="--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">PRODUCTIVIDAD</span><strong class="ov-value">Más productividad mediante IA</strong></article><article class="ov-card" data-wave="1" style="--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">LICENCIAS</span><strong class="ov-value">Reducir las licencias sin uso</strong></article><article class="ov-card" data-wave="1" style="--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">MEDICIÓN</span><strong class="ov-value">Mediciones automatizadas</strong><span class="ov-sub">Saber quién usa qué y cuánto</span></article><article class="ov-card" data-wave="1" style="--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">PROCESOS</span><strong class="ov-value">Automatizar tareas repetitivas</strong></article><article class="ov-card" data-wave="1" style="--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Qué área se suma primero?</strong></article><article class="ov-card" data-wave="2" style="--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">DIFUSIÓN</span><strong class="ov-value">Aumentar la difusión de la IA</strong></article><article class="ov-card" data-wave="2" style="--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">CULTURA</span><strong class="ov-value">Cultura del cambio y avance con IA</strong></article><article class="ov-card" data-wave="2" style="--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">FORMACIÓN</span><strong class="ov-value">Capacitaciones a medida por área</strong></article><article class="ov-card" data-wave="2" style="--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">COMUNIDAD</span><strong class="ov-value">Una red de referentes de IA</strong><span class="ov-sub">Embajadores en cada equipo</span></article><article class="ov-card" data-wave="2" style="--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">CONOCIMIENTO</span><strong class="ov-value">Biblioteca de prompts del banco</strong></article><article class="ov-card" data-wave="2" style="--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Cómo compartimos lo aprendido?</strong></article><article class="ov-card" data-wave="3" style="--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">DIFUSIÓN</span><strong class="ov-value">Mostrar casos de éxito internos</strong></article><article class="ov-card" data-wave="3" style="--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">ADOPCIÓN</span><strong class="ov-value">Gamificar el uso de la IA</strong><span class="ov-sub">Desafíos, logros y rankings</span></article><article class="ov-card" data-wave="3" style="--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">GOBIERNO</span><strong class="ov-value">Guías de uso responsable</strong></article><article class="ov-card" data-wave="3" style="--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">CULTURA</span><strong class="ov-value">Una hackatón de IA del banco</strong></article><article class="ov-card" data-wave="3" style="--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">MEDICIÓN</span><strong class="ov-value">Tablero de adopción por área</strong></article><article class="ov-card" data-wave="3" style="--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Por dónde empezamos?</strong></article></div>
- <div class="ov-focus-content"><small>DE LA COMPLEJIDAD A LA OPORTUNIDAD</small><h2>No podíamos abordar todo a la vez.</h2><p>¿Dónde podíamos generar una mejora concreta?</p></div>
- <footer class="ov-footer"><span class="ov-status" id="ov-status">Punto de partida</span><div class="ov-actions"><button class="ov-action" type="button" id="ov-next" onclick="advanceOverload()">Encontrar el foco →</button></div></footer>
+<section id="slide-10" class="slide" aria-label="IA Native · El punto de partida">
+  <div class="ov-grid-bg" aria-hidden="true"></div>
+  <header class="ov-header"><span class="ov-kicker">IA NATIVE / El punto de partida</span></header>
+  <div class="ov-field">
+    <article class="ov-card" style="--ov-delay:0ms;--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">AGENTES</span><strong class="ov-value">Facilitar la creación de agentes</strong><span class="ov-sub">Que cualquiera pueda armar el suyo</span></article>
+    <article class="ov-card" style="--ov-delay:70ms;--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">EXPERIENCIA</span><strong class="ov-value">Una UI con identidad Supervielle</strong></article>
+    <article class="ov-card" style="--ov-delay:140ms;--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">MARCA</span><strong class="ov-value">Crear una mascota de IA del banco</strong><span class="ov-sub">La cara de la IA en Supervielle</span></article>
+    <article class="ov-card" style="--ov-delay:210ms;--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">AGENTES</span><strong class="ov-value">Mejores agentes para cada área</strong></article>
+    <article class="ov-card" style="--ov-delay:280ms;--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">INTEGRACIÓN</span><strong class="ov-value">MCPs más completos</strong></article>
+    <article class="ov-card" style="--ov-delay:350ms;--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">INTEGRACIÓN</span><strong class="ov-value">Más conectores</strong><span class="ov-sub">Con los sistemas del banco</span></article>
+    <article class="ov-card" style="--ov-delay:460ms;--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">ADOPCIÓN</span><strong class="ov-value">Aumentar el uso de la IA en el banco</strong></article>
+    <article class="ov-card" style="--ov-delay:518ms;--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">PRODUCTIVIDAD</span><strong class="ov-value">Más productividad mediante IA</strong></article>
+    <article class="ov-card" style="--ov-delay:576ms;--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">LICENCIAS</span><strong class="ov-value">Reducir las licencias sin uso</strong></article>
+    <article class="ov-card" style="--ov-delay:634ms;--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">MEDICIÓN</span><strong class="ov-value">Mediciones automatizadas</strong><span class="ov-sub">Saber quién usa qué y cuánto</span></article>
+    <article class="ov-card" style="--ov-delay:692ms;--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">PROCESOS</span><strong class="ov-value">Automatizar tareas repetitivas</strong></article>
+    <article class="ov-card" style="--ov-delay:750ms;--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Qué área se suma primero?</strong></article>
+    <article class="ov-card" style="--ov-delay:830ms;--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">DIFUSIÓN</span><strong class="ov-value">Aumentar la difusión de la IA</strong></article>
+    <article class="ov-card" style="--ov-delay:876ms;--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">CULTURA</span><strong class="ov-value">Cultura del cambio y avance con IA</strong></article>
+    <article class="ov-card" style="--ov-delay:922ms;--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">FORMACIÓN</span><strong class="ov-value">Capacitaciones a medida por área</strong></article>
+    <article class="ov-card" style="--ov-delay:968ms;--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">COMUNIDAD</span><strong class="ov-value">Una red de referentes de IA</strong><span class="ov-sub">Embajadores en cada equipo</span></article>
+    <article class="ov-card" style="--ov-delay:1014ms;--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">CONOCIMIENTO</span><strong class="ov-value">Biblioteca de prompts del banco</strong></article>
+    <article class="ov-card" style="--ov-delay:1060ms;--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Cómo compartimos lo aprendido?</strong></article>
+    <article class="ov-card" style="--ov-delay:1130ms;--angle:-3deg;--dx:-3px;--dy:-3px"><span class="ov-kind">DIFUSIÓN</span><strong class="ov-value">Mostrar casos de éxito internos</strong></article>
+    <article class="ov-card" style="--ov-delay:1168ms;--angle:2deg;--dx:2px;--dy:3px"><span class="ov-kind">ADOPCIÓN</span><strong class="ov-value">Gamificar el uso de la IA</strong><span class="ov-sub">Desafíos, logros y rankings</span></article>
+    <article class="ov-card" style="--ov-delay:1206ms;--angle:-2deg;--dx:0px;--dy:1px"><span class="ov-kind">GOBIERNO</span><strong class="ov-value">Guías de uso responsable</strong></article>
+    <article class="ov-card" style="--ov-delay:1244ms;--angle:3deg;--dx:3px;--dy:-1px"><span class="ov-kind">CULTURA</span><strong class="ov-value">Una hackatón de IA del banco</strong></article>
+    <article class="ov-card" style="--ov-delay:1282ms;--angle:1deg;--dx:-2px;--dy:2px"><span class="ov-kind">MEDICIÓN</span><strong class="ov-value">Tablero de adopción por área</strong></article>
+    <article class="ov-card" style="--ov-delay:1320ms;--angle:-1deg;--dx:1px;--dy:-2px"><span class="ov-kind">PREGUNTA</span><strong class="ov-value">¿Por dónde empezamos?</strong></article>
+  </div>
+  <footer class="ov-footer"><button class="ov-action" type="button" onclick="goToSlide(7)">Ir a Definición <span aria-hidden="true">→</span></button></footer>
 </section>
 
     <section id="slide-7" class="slide definition" aria-labelledby="definition-title">
@@ -4844,46 +4872,12 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
       setDiscoveryStep(discoveryStep + 1);
     }
 
-    let ovTimers = [], ovPhase = 0;
-    function stopOverload(){ovTimers.forEach(clearTimeout);ovTimers=[];}
-    function startOverload(){
-      stopOverload();ovPhase=0;
-      const root=document.getElementById('slide-10');
-      root.classList.remove('ov-running','ov-focus');
-      root.querySelectorAll('.ov-card').forEach(c=>c.classList.remove('in'));
-      document.getElementById('ov-status').textContent='Punto de partida';
-      document.getElementById('ov-next').textContent='Ver las ideas →';
-    }
-    function deployOverload(){
-      stopOverload();ovPhase=1;
-      const root=document.getElementById('slide-10');
-      const cards=[...root.querySelectorAll('.ov-card')];
-      const status=document.getElementById('ov-status');
-      document.getElementById('ov-next').textContent='Encontrar el foco →';
-      root.classList.add('ov-running');
-      if(matchMedia('(prefers-reduced-motion: reduce)').matches){cards.forEach(c=>c.classList.add('in'));status.textContent='Muchas ideas. Ningún dato todavía.';return;}
-      const schedule=(fn,t)=>ovTimers.push(setTimeout(fn,t));
-      const starts=[350,2450,4250,5650], gaps=[320,240,170,100], labels=['Producto y herramientas','Adopción y productividad','Personas y cultura','Muchas ideas. Ningún dato todavía.'];
-      for(let w=0;w<4;w++){
-        schedule(()=>status.textContent=labels[w],starts[w]);
-        cards.filter(c=>Number(c.dataset.wave)===w).forEach((c,i)=>schedule(()=>c.classList.add('in'),starts[w]+i*gaps[w]));
-      }
-    }
-    function advanceOverload(){
-      if(ovPhase===0){deployOverload();return;}
-      if(ovPhase===2){goToSlide(7);return;}
-      stopOverload();ovPhase=2;
-      const root=document.getElementById('slide-10');root.classList.add('ov-running','ov-focus');root.querySelectorAll('.ov-card').forEach(c=>c.classList.add('in'));
-      document.getElementById('ov-status').textContent='Elegir qué resolver';document.getElementById('ov-next').textContent='Ir a la definición →';
-    }
-
     let currentSlide = 1;
 
     function goToSlide(num) {
       if (!slideOrder.includes(num)) return;
       if (currentSlide === 6) stopIdear();
       if (currentSlide === 8) cancelAnimationFrame(impactGoalFrame);
-      if (currentSlide === 10) stopOverload();
       if (currentSlide === 11 && num !== 11) prototypeVideo.pause();
       currentSlide = num;
 
@@ -4902,7 +4896,6 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
       if (num === 8) startImpactGoal();
       if (num === 9) setClosingThanks(false, false);
       syncTeamVideo(num === 2);
-      if (num === 10) startOverload();
       if (num === 11 && prototypeVideo.preload === 'none') {
         prototypeVideo.preload = 'metadata';
         prototypeVideo.load();
@@ -5006,7 +4999,11 @@ button:focus-visible { outline: 3px solid var(--celeste-deep); outline-offset: 4
           return;
         }
       }
-      if (currentSlide === 10 && (e.key === 'ArrowRight' || (e.key === ' ' && !['BUTTON','INPUT'].includes(document.activeElement.tagName)))) { e.preventDefault(); advanceOverload(); return; }
+      if (currentSlide === 10 && e.key === ' ' && !['BUTTON', 'INPUT'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        goToSlide(7);
+        return;
+      }
       if (currentSlide === 9 && e.key === 'ArrowRight') {
         e.preventDefault();
         if (closingThanks.hidden) setClosingThanks(true);
@@ -5395,8 +5392,7 @@ document.addEventListener('keydown', event => {
   if (event.key.toLowerCase() === 'n') {
     document.getElementById(presenterNotes[currentSlide])?.showModal();
   } else if (event.key.toLowerCase() === 'r') {
-    if (currentSlide === 10) startOverload();
-    else if ([4, 7, 8].includes(currentSlide)) replayAnimations(currentSlide);
+    if ([4, 7, 8, 10].includes(currentSlide)) replayAnimations(currentSlide);
   }
 });
 
